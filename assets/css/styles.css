@@ -204,6 +204,8 @@ a {
   font-weight: normal;
 }
 .texto2{
+  margin-top: -25px;
+  margin-bottom: -25px;
   grid-column: 2/3;
   grid-row: 2/3;
   z-index: 0;

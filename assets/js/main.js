@@ -42,3 +42,5 @@ const typedIndex = new Typed('.typedIndex',{
     //smartBackspace: true,
 });
 
+
+

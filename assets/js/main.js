@@ -26,3 +26,19 @@ function colorLink(){
 
 linkColor.forEach(l => l.addEventListener('click', colorLink));
 
+const typedIndex = new Typed('.typedIndex',{
+    strings: [
+        'Desarrollador Web',
+        'Desarrollador Móvil'
+    ],
+    typeSpeed: 65,
+    startDelay: 300,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: true,
+    loopCount: false,
+    showCursor: true,
+    cursorChar: '|',
+    //smartBackspace: true,
+});
+

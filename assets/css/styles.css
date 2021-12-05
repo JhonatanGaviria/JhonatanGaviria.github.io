@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap");
 /*===== VARIABLES CSS Y SASS =====*/
 /*Varibles sass*/
 /*Variables css*/
@@ -7,7 +7,7 @@
 :root {
   --first-color: #003A45;
   --second-color: #FFB909;
-  --white-color: #EDEDED;
+  --white-color: #FFFFFF;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -258,8 +258,101 @@ a {
 .imgCartoon{
   max-width: 350px;
 }
-
-
+/*===== Skilss Section =====*/
+.skills{
+  height: 100vh;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: auto auto 1fr;
+}
+.skillsTxt1{
+  grid-column: 1/1;
+  grid-row: 1/2;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.skillsTxt2{
+  grid-column: 1/1;
+  grid-row: 1/2;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.skillsTxt1 h1{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 120px;
+  color: rgba(0, 58, 69, 0.1);
+}
+.skillsTxt2 h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  color: #003A45;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; 
+}
+.skillsParrafo1{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  font-family: Montserrat;
+  font-size: 18px;
+}
+.skillsBox{
+  margin: auto;
+  width: 90%;
+  
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+.skillBox{
+  width: 150px;
+  height: 165px;
+  -webkit-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+.skillBoxImg{
+  height: 125px;
+  width: 100%;
+  background: rgba(255, 75, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skillBoxImg img{
+  height: 85px;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+.skillBox:hover{
+  animation: rotateOut; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  
+}
+.skillBoxTxt{
+  width: 100%;
+  height: 40px;
+  background-color: var(--first-color);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*===== mediaquery Section =====*/
 @media (max-width: 1000px) {
   .gridIndex{
     display: grid;
@@ -304,9 +397,42 @@ a {
     justify-self: center;
     margin-left: 0px;
   }
-
+  /* //skills section// */
+  .skillsTxt1 h1{
+    font-size: 80px;
+  }
+  .skillsTxt2 h2{
+    font-size: 40px;
+  }
+  .skillsParrafo1 {
+    font-size: 14px;
+  }
+  .skillBoxTxt{
+    font-size: 12px;
+  }
+  .skillBox{
+    width: 120px;
+    height: 135px;
+  }
+  .skillBoxImg{
+    height: 100px;
+  }
+  .skillBoxTxt{
+    height: 35px;
+  }
+  .skillBoxImg img{
+    height: 65px;
+  }
 }
-
+@media (max-width: 700px){
+  /* //skills section// */
+  .skillsTxt1 h1{
+    font-size: 60px;
+  }
+  .skillsTxt2 h2{
+    font-size: 30px;
+  }
+}
 @media (max-width: 650px){
   .texto4 h1{
     font-size: 40px;
@@ -320,5 +446,8 @@ a {
     max-width: 80%;
   }
 }
-
-/*===== About Section =====*/
+@media (max-width: 530px){
+  .skillsTxt1{
+    display: none;
+  }
+}

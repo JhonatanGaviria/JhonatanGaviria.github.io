@@ -424,7 +424,7 @@ a {
     height: 65px;
   }
 }
-@media (max-width: 700px){
+@media (max-width: 760px){
   /* //skills section// */
   .skillsTxt1 h1{
     font-size: 60px;
@@ -445,9 +445,8 @@ a {
     margin: auto;
     max-width: 80%;
   }
-}
-@media (max-width: 530px){
   .skillsTxt1{
     display: none;
   }
 }
+

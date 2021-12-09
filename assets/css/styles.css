@@ -376,7 +376,9 @@ a {
   align-items: center;
 }
 .contact .txtForm {
-  width: 70%;
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -451,6 +453,15 @@ a {
   position: relative;
   height: 48px;
   margin-bottom: 1.5rem;
+  background-color: #e5ebec;
+  border-radius: .5rem;
+}
+.formDivTextArea{
+  position: relative;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  background-color: #e5ebec;
+  border-radius: .5rem;
 }
 .form__div48{
   width: 48%;
@@ -461,6 +472,7 @@ a {
 .txtArea{
   width: 100%;
   height: 200px;
+  background-color: #e5ebec;
 }
 .form__input{
   position: absolute;
@@ -469,7 +481,7 @@ a {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  border: none;
+  border: 2px solid #003A45;
   border-radius: .5rem;
   outline: none;
   padding: 1rem;
@@ -485,10 +497,6 @@ a {
   color: #000;
   font-size: 16px;
   transition: .3s;
-}
-input[type="text"], textarea {
-
-  background-color : rgba(0, 58, 69, 0.1);
 
 }
 textarea{
@@ -496,6 +504,8 @@ textarea{
   padding: 10px;
   font-family: Montserrat;
   font-size: 16px;
+  background: none;
+  border: 2px solid #003A45;
 }
 textarea:focus+ .form__label{
   top: -.5rem;
@@ -504,13 +514,17 @@ textarea:focus+ .form__label{
   font-size: var(--small-font-size);
   font-weight: 500;
   z-index: 10;
+  border: 2px solid #FFB909;
+  border-radius: .5rem;
 }
-textarea:not(:placeholder-shown) + .form__label{
+textarea:not(:placeholder-shown):not(:focus) +.form__label{
   top: -.5rem;
   left: .8rem;
   font-size: var(--small-font-size);
   font-weight: 500;
   z-index: 10;
+  border: 2px solid #003A45;
+  border-radius: .5rem;
 }
 textarea:focus{
   outline-color: #FFB909;
@@ -520,7 +534,7 @@ textarea:focus{
   top: -.5rem;
   left: .8rem;
   background-color: #e5ebec;
-  border: 1.5px solid #FFB909;
+  border: 2px solid #FFB909;
   border-radius: .5rem;
   font-size: var(--small-font-size);
   font-weight: 500;
@@ -534,11 +548,43 @@ textarea:focus{
   font-size: var(--small-font-size);
   font-weight: 500;
   z-index: 10;
+  border: 2px solid #003A45;
+  border-radius: .5rem;
 }
 
 /*Input focus*/
 .form__input:focus{
-  border: 1.5px solid #FFB909;
+  border: 2px solid #FFB909;
+}
+
+.btnContact{
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003A45;
+  border-radius: .5rem;
+  border: none;
+  font-family: Montserrat;
+  font-weight: bold;
+  color: white;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btnContact i{
+  padding-left: 10px;
+  font-size: 20px;
+  color: white;
+}
+.btnContact:hover{
+  background-color: #FFB909;
+}
+.btnContact:hover .txt{
+  display: none;
+}
+.btnContact:hover .btnContact i{
+  
 }
 /*===== mediaquery Section =====*/
 @media (max-width: 1000px) {
